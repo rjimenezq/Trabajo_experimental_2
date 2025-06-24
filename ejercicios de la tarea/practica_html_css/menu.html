@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú de Ejercicios JS</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      font-family: 'Arial', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+    .menu-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      width: 400px;
+      padding: 30px 25px;
+      animation: fadeIn 0.6s ease-out;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+    .menu-container h1 {
+      text-align: center;
+      font-size: 2rem;
+      background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: bold;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+      animation: titleGlow 2s ease-in-out infinite alternate;
+      position: relative;
+      overflow: hidden;
+    }
+    ul.menu-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    ul.menu-list li {
+      margin: 15px 0;
+      background: linear-gradient(45deg, #ff6b6b, #ffa726, #4ecdc4);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+    ul.menu-list li:hover {
+      background: linear-gradient(45deg, #4ecdc4, #ffa726, #ff6b6b);
+      box-shadow: 0 15px 40px rgba(78, 205, 196, 0.5);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    ul.menu-list li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 15px 20px;
+      border-radius: 15px;
+      position: relative;
+      z-index: 2;
+    }
+    ul.menu-list li .desc {
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #eee;
+      padding: 0 20px 15px 20px;
+      margin-top: -10px;
+      user-select: none;
+      font-style: italic;
+    }
+
+    @keyframes titleGlow {
+      0% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+      100% { text-shadow: 0 0 40px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Menú de Ejercicios JS</h1>
+    <ul class="menu-list">
+      <li>
+        <a href="./pages/arreglo con valores.html">Ejercicio 1: Suma de dos números</a>
+        <p class="desc">Solicita dos números al usuario y muestra su suma.</p>
+      </li>
+      <li>
+        <a href="./pages/elementos_con_push.html">Ejercicio 2: Número par o impar</a>
+        <p class="desc">Determina si un número ingresado es par o impar.</p>
+      </li>
+      <li>
+        <a href="./pages/elementos_sin_push.html">Ejercicio 3: Validar contraseña</a>
+        <p class="desc">Verifica si una contraseña cumple con ciertos requisitos.</p>
+      </li>
+      <li>
+        <a href="./pages/mostrar_cadena.html">Ejercicio 4: Crear y mostrar cadena</a>
+        <p class="desc">Crea una cadena y la muestra por consola.</p>
+      </li>
+      <li>
+        <a href="./pages/cantidad_caracteres.html">Ejercicio 5: Recorrer arreglo con for</a>
+        <p class="desc">Recorre un arreglo de frutas usando un ciclo for.</p>
+      </li>
+      <li>
+        <a href="./pages/letra_sin_ciclos.html">Ejercicio 6: Mostrar primeras 4 letras</a>
+        <p class="desc">Muestra las primeras 4 letras de una palabra ingresada.</p>
+      </li>
+      <li>
+        <a href="./pages/letras_usando_split.html">Ejercicio 7: Mostrar números pares</a>
+        <p class="desc">Muestra los números pares dentro de un rango dado.</p>
+      </li>
+      <li>
+        <a href="./pages/cadena_arreglo_split map.html">Ejercicio 8: Calcular promedio</a>
+        <p class="desc">Calcula el promedio de números ingresados.</p>
+      </li>
+      <li>
+        <a href="./pages/recorrer_arreglo_for.html">Ejercicio 9: Recorrer arreglo con for</a>
+        <p class="desc">Recorre un arreglo y muestra sus elementos.</p>
+      </li>
+      <li>
+        <a href="./pages/recorrer_arreglo_while.html">Ejercicio 10: Recorrer arreglo con while</a>
+        <p class="desc">Recorre un arreglo usando ciclo while.</p>
+      </li>
+      <li>
+        <a href="./pages/mostrar_letra_for.html">Ejercicio 11: Mostrar letras de palabra (for)</a>
+        <p class="desc">Muestra cada letra de una palabra usando for.</p>
+      </li>
+      <li>
+        <a href="./pages/mostrar_letra_while.html">Ejercicio 12: Mostrar letras de palabra (while)</a>
+        <p class="desc">Muestra cada letra de una palabra usando while.</p>
+      </li>
+      <li>
+        <a href="./pages/contar_vocales_palabras.html">Ejercicio 13: Contar vocales</a>
+        <p class="desc">Cuenta las vocales en una palabra ingresada.</p>
+      </li>
+      <li>
+        <a href="./pages/comparar_2palabras_letra.html">Ejercicio 14: Comparar palabras letra a letra</a>
+        <p class="desc">Compara dos palabras posición por posición.</p>
+      </li>
+      <li>
+        <a href="./pages/mostrar_divisores.html">Ejercicio 15: Mostrar divisores</a>
+        <p class="desc">Muestra los divisores de cada número en un arreglo.</p>
+      </li>
+      <li>
+        <a href="./pages/sumar_divisores.html">Ejercicio 16: Sumar divisores</a>
+        <p class="desc">Suma los divisores (excepto el propio número) de cada número.</p>
+      </li>
+      <li>
+        <a href="./pages/Verificar_numeroperfecto.html">Ejercicio 17: Verificar números perfectos</a>
+        <p class="desc">Determina si cada número del arreglo es un número perfecto.</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+

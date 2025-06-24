@@ -1,0 +1,110 @@
+/* Tu CSS base con animación fadeIn y animaciones de items */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255 255 255 / 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación fadeIn para todo el contenedor */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Estilo titulo */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+/* Lista */
+ul.menu-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Animación slideIn para items */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+ul.menu-list li {
+  margin: 15px 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideIn 0.6s forwards;
+}
+
+/* Delay progresivo */
+ul.menu-list li:nth-child(1) { animation-delay: 0.2s; }
+ul.menu-list li:nth-child(2) { animation-delay: 0.4s; }
+ul.menu-list li:nth-child(3) { animation-delay: 0.6s; }
+ul.menu-list li:nth-child(4) { animation-delay: 0.8s; }
+ul.menu-list li:nth-child(5) { animation-delay: 1.0s; }
+ul.menu-list li:nth-child(6) { animation-delay: 1.2s; }
+ul.menu-list li:nth-child(7) { animation-delay: 1.4s; }
+ul.menu-list li:nth-child(8) { animation-delay: 1.6s; }
+ul.menu-list li:nth-child(9) { animation-delay: 1.8s; }
+ul.menu-list li:nth-child(10) { animation-delay: 2.0s; }
+ul.menu-list li:nth-child(11) { animation-delay: 2.2s; }
+ul.menu-list li:nth-child(12) { animation-delay: 2.4s; }
+ul.menu-list li:nth-child(13) { animation-delay: 2.6s; }
+ul.menu-list li:nth-child(14) { animation-delay: 2.8s; }
+ul.menu-list li:nth-child(15) { animation-delay: 3.0s; }
+ul.menu-list li:nth-child(16) { animation-delay: 3.2s; }
+ul.menu-list li:nth-child(17) { animation-delay: 3.4s; }
+
+ul.menu-list li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  background: rgba(255 255 255 / 0.1);
+}
+
+ul.menu-list li a:hover {
+  background: rgba(255 255 255 / 0.3);
+  text-shadow: 0 0 8px #fff;
+}
